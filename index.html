@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manish - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="scroll-indicator">
+        <div class="scroll-progress"></div>
+    </div>
+
+    <nav id="navbar">
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo">MR</div>
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li>
+                        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="5"></circle>
+                                <line x1="12" y1="1" x2="12" y2="3"></line>
+                                <line x1="12" y1="21" x2="12" y2="23"></line>
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                <line x1="1" y1="12" x2="3" y2="12"></line>
+                                <line x1="21" y1="12" x2="23" y2="12"></line>
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                            </svg>
+                            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Hi, I'm <span class="highlight">Manish Rana</span></h1>
+                <p>Hi! I’m a passionate learner who enjoys building projects in web development. I love solving problems, improving my skills, and creating clean, functional code.My GitHub includes experiments, coursework projects, and things I build for fun. Always improving, always building.</p>
+                <a href="#projects" class="cta-button">View My Work</a>
+            </div>
+        </div>
+        <div class="floating-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+       
+                    <p>I'm a creative developer who loves to build web applications. I love the process of turning complex problems into simple, beautiful designs. When I'm not coding, you can find me exploring new technologies, contributing to open source projects, or enjoying a good cup of coffee. I believe in writing clean, maintainable code and creating experiences that users genuinely enjoy. These are the stack that, I use for development.</p>
+                    
+                    <div class="skills">
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Flutter</span>
+                        <span class="skill-tag">Git</span>
+                    </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3 class="project-title">E-Commerce Platform</h3>
+                    <p class="project-description">A full-featured e-commerce platform with user authentication, payment processing, and admin dashboard. Built with modern technologies for optimal performance.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Not Completed</a>
+                       
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3 class="project-title">Task Management App</h3>
+                    <p class="project-description">A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Next.js</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">Prisma</span>
+                        <span class="tech-tag">Socket.io</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Not Completed</a>
+                        
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3 class="project-title">Weather Dashboard</h3>
+                    <p class="project-description">A beautiful weather dashboard with location-based forecasts, interactive maps, and detailed weather analytics with data visualization.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">D3.js</span>
+                        <span class="tech-tag">OpenWeather API</span>
+                        <span class="tech-tag">Chart.js</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Not Completed</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 style="font-size: 2.2rem; font-weight: 300; margin-bottom: 1.5rem; color: var(--text-primary);">We are here to help!</h3>
+                    <p class="contact-text">Let us know how we can best serve you. Use the contact form to email us or select from the topics below that best fit your needs. It's an honor to support you in your journey towards better health.</p>
+                    <div class="contact-links" style="justify-content: flex-start; margin-top: 2rem;">
+                        <a href="https://mail.google.com/mail/u/0/#sent" class="contact-link">Email</a>
+                        <a href="#" class="contact-link">Instagram</a>
+                        <a href="#" class="contact-link">GitHub</a>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                        <input type="hidden" name="access_key" value="1eb1a67f-c863-4a1c-b6a0-fceb34cda97c">
+                        <input type="text" name="name" placeholder="Name" class="form-input" required>
+                        <input type="email" name="email" placeholder="Email" class="form-input" required>
+                        <input type="tel" name="phone" placeholder="Phone number" class="form-input">
+                        <textarea name="message" placeholder="Comment" class="form-input form-textarea" rows="4" required></textarea>
+                        <button type="submit" class="cta-button" style="margin-top: 1rem; border: none; cursor: pointer; display: block; width: fit-content; margin-left: 0;">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+    <!-- AI Chat Items -->
+    <!-- Floating Button -->
+      <button id="aiFloatBtn">🤖</button>
+    
+      <!-- Chat Box -->
+      <div id="chatBox">
+        <textarea id="userInput" rows="4" placeholder="Ask your question..."></textarea>
+        <button id="generateBtn">Ask</button>
+        <div id="output">🤖 Ready</div>
+      </div>
+    
+      <!-- Gemini Script -->
+      <script type="module">
+        import { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold } from 'https://cdn.jsdelivr.net/npm/@google/generative-ai@latest/+esm';
+    
+        const API_KEY = "--"; // OK for dev/testing only
+        const genAI = new GoogleGenerativeAI(API_KEY);
+    
+    
+    
+        const ENDPOINTS = {
+          ITEMS: 'https://icy-bird-ddcc.dummyone137.workers.dev/available-items',
+          PURCHASES: 'https://icy-bird-ddcc.dummyone137.workers.dev/purchases'
+        };
+    
+        const safetySettings = [
+          {
+            category: HarmCategory.HARM_CATEGORY_HARASSMENT,
+            threshold: HarmBlockThreshold.BLOCK_ONLY_HIGH,
+          },
+          {
+            category: HarmCategory.HARM_CATEGORY_HATE_SPEECH,
+            threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE,
+          },
+        ];
+    
+        const username = "Guest";
+        const account_num = "N/A";
+        const toggleBtn = document.getElementById("aiFloatBtn");
+        const chatBox = document.getElementById("chatBox");
+    
+        toggleBtn.addEventListener("click", () => {
+          chatBox.style.display = chatBox.style.display === "flex" ? "none" : "flex";
+          chatBox.style.flexDirection = "column";
+        });
+    
+        async function fetchData(url) {
+          const response = await fetch(url);
+          if (!response.ok) throw new Error(`Failed to fetch ${url}`);
+          return response.json();
+        }
+    
+        async function typeWriter(text, element, delay = 30) {
+          element.innerHTML = "";
+          for (let i = 0; i < text.length; i++) {
+            element.innerHTML += text[i];
+            await new Promise(resolve => setTimeout(resolve, delay));
+          }
+        }
+    
+        async function generateContent() {
+          const inputEl = document.getElementById('userInput');
+          const rawInput = inputEl.value.trim();
+          const outputDiv = document.getElementById('output');
+    
+          if (!rawInput) {
+            outputDiv.innerHTML = "⚠️ Please enter something.";
+            return;
+          }
+    
+          outputDiv.innerHTML = "⏳ Thinking...";
+    
+          try {
+            const [availableItems, purchaseHistory] = await Promise.all([
+              fetchData(ENDPOINTS.ITEMS),
+              fetchData(ENDPOINTS.PURCHASES)
+            ]);
+    
+            const model = genAI.getGenerativeModel({
+              model: "gemini-1.5-flash", // Safe for free use
+              safetySettings,
+            });
+    
+            const result = await model.generateContent({
+              contents: [
+                {
+                  role: "user",
+                  parts: [{
+                    text: `You are an AI assistant trained by Manish.\n\nUser: @${username}\nAccount: ${account_num}\nAvailable Items: ${JSON.stringify(availableItems)}\nPurchase History: ${JSON.stringify(purchaseHistory)}\n\nQuestion: ${rawInput}\n\nAnswer in clear bullet points if possible.`
+                  }]
+                }
+              ]
+            });
+    
+            const responseText = result.response?.candidates?.[0]?.content?.parts?.[0]?.text;
+    
+            if (!responseText || responseText.trim() === "") {
+              outputDiv.innerHTML = "⚠️ The response was empty. Try again.";
+              return;
+            }
+    
+            await typeWriter(responseText, outputDiv);
+            inputEl.value = "";
+    
+          } catch (error) {
+            console.error("Error:", error);
+            outputDiv.innerHTML = `❌ Error: ${error.message}`;
+          }
+        }
+    
+        document.getElementById('generateBtn').addEventListener('click', generateContent);
+        document.getElementById('userInput').addEventListener('keydown', (e) => {
+          if (e.key === "Enter" && !e.shiftKey) {
+            e.preventDefault();
+            generateContent();
+          }
+        });
+      </script>
+</body>
+</html>
