@@ -223,7 +223,7 @@ img {
     position: relative;
     z-index: 2;
     text-align: center;
-    padding: 0 2rem 8vh;
+    padding: 0 2rem 2vh;
     opacity: 0;
     transform: translateY(40px);
     animation: heroReveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
@@ -238,13 +238,14 @@ img {
 }
 
 .hero-name {
-    font-family: var(--font-serif);
-    font-size: clamp(4rem, 12vw, 10rem);
-    font-weight: 900;
+    font-family: var(--font-script);
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 400;
     color: var(--white);
-    line-height: 0.9;
-    letter-spacing: -0.02em;
-    text-transform: uppercase;
+    line-height: normal;
+    padding-top: 0.2em;
+    margin-bottom: -0.3em;
+    word-spacing: 0.3em;
 }
 
 .hero-scroll-indicator {
@@ -1064,6 +1065,10 @@ footer {
     .faq-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
+    }
+
+    .faq-spacer {
+        display: none !important;
     }
 
     /* Statement */

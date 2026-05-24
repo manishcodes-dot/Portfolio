@@ -1,0 +1,31 @@
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0a0a0a;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#greeting-text {
+    color: #ffffff;
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+    font-weight: 500;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+#greeting-text.fade-in {
+    opacity: 1;
+}

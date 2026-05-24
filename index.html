@@ -15,9 +15,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=2">
+    <link rel="stylesheet" href="loader.css">
 </head>
 
 <body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="greeting-text"></div>
+    </div>
+
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-inner">
@@ -45,7 +51,7 @@
         </div>
         <div class="hero-content">
             <p class="hero-tagline">Custom web solutions tailored to your brand.</p>
-            <h1 class="hero-name">MANISH<br>RANA</h1>
+            <h1 class="hero-name">Manish Rana</h1>
         </div>
         <div class="hero-scroll-indicator">
             <span>Scroll</span>
@@ -235,7 +241,7 @@
         </div>
         <div class="faq-grid">
             <div class="faq-column">
-                <h4 class="faq-column-title">QUESTIONS</h4>
+                <h4 class="faq-column-title">QUESTIONS & ANSWERS</h4>
                 <div class="faq-item" data-faq="1">
                     <div class="faq-question">
                         <span>What technologies do you use?</span>
@@ -265,7 +271,7 @@
                 </div>
             </div>
             <div class="faq-column">
-                <h4 class="faq-column-title">ANSWERS</h4>
+                <h4 class="faq-column-title faq-spacer" style="visibility: hidden;">&nbsp;</h4>
                 <div class="faq-item" data-faq="4">
                     <div class="faq-question">
                         <span>How long does a project take?</span>
@@ -352,6 +358,7 @@
     </footer>
 
     <script src="script.js?v=2"></script>
+    <script src="loader.js"></script>
 </body>
 
 </html>
