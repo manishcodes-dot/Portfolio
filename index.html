@@ -4,301 +4,358 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manish Rana | Web Developer Portfolio</title>
+    <title>Manish Rana | Web Developer & Designer</title>
     <meta name="description"
-        content="Official portfolio of Manish Rana, a web developer showcasing projects, skills, and contact information.">
-    <meta name="keywords" content="Manish Rana, web developer, portfolio, frontend developer, JavaScript developer">
+        content="Manish Rana — A passionate web developer on a mission to build elegant, value-driven digital experiences.">
+    <meta name="keywords" content="Manish Rana, web developer, portfolio, frontend developer, JavaScript, Flutter">
     <meta name="author" content="Manish Rana">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://yourdomain.com/">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="scroll-indicator">
-        <div class="scroll-progress"></div>
-    </div>
-
+    <!-- Navigation -->
     <nav id="navbar">
-        <div class="container">
-            <div class="nav-container">
-                <a href="#home" class="logo">MR</a> 
-                <ul class="nav-links">
-                    <li><a href="#home" class="nav-link active">Home</a></li>
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#projects" class="nav-link">Projects</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                    <li>
-                        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
-                            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="5"></circle>
-                                <line x1="12" y1="1" x2="12" y2="3"></line>
-                                <line x1="12" y1="21" x2="12" y2="23"></line>
-                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                                <line x1="1" y1="12" x2="3" y2="12"></line>
-                                <line x1="21" y1="12" x2="23" y2="12"></line>
-                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                            </svg>
-                            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                            </svg>
-                        </button>
-                    </li>
-                </ul>
-            </div>
+        <div class="nav-inner">
+            <a href="#home" class="nav-logo">MR</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#works" class="nav-link">Works</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Hi, I'm <span class="highlight">Manish Rana</span></h1>
-                <p>Hi! I’m a passionate learner who enjoys building projects in web development. I love solving
-                    problems, improving my skills, and creating clean, functional code.My GitHub includes experiments,
-                    coursework projects, and things I build for fun. Always improving, always building.</p>
-                <a href="#projects" class="cta-button">View My Work</a>
-            </div>
+        <div class="hero-bg">
+            <img src="Resources/heropagebackground.png" alt="Studio storefront" class="hero-bg-img">
+            <div class="hero-overlay"></div>
         </div>
-        <div class="floating-shapes">
-            <div class="shape"></div>
-            <div class="shape"></div>
-            <div class="shape"></div>
+        <div class="hero-content">
+            <p class="hero-tagline">Custom web solutions tailored to your brand.</p>
+            <h1 class="hero-name">MANISH<br>RANA</h1>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>    <!-- About Section -->
+    <!-- About & Skills Section -->
+    <section id="about" class="about-section">
+        <!-- About Image (Large showcase) -->
+        <div class="about-image-wrapper">
+            <img src="Resources/about-image.png" alt="" class="about-img">
+        </div>
+
+        <!-- About/Skills Split Content -->
+        <div class="about-skills-layout">
+            <div class="about-skills-header-col">
+                <span class="skills-script">Expertise</span>
+                <h2 class="skills-title">SKILLS</h2>
+                <p class="about-lead">
+                    A passionate web developer on a mission to build elegant, value-driven digital experiences.
+                </p>
+                <p class="about-sub">Frontend Developer • Flutter Dev • Problem Solver</p>
+            </div>
+            <div class="about-skills-content-col">
+                <!-- Categorized Skills Grid -->
+                <div class="skills-container">
+                    <!-- Column 1 -->
+                    <div class="skills-col">
+                        <!-- Frontend -->
+                        <div class="skills-category">
+                            <h4 class="skills-category-title">Frontend</h4>
+                            <div class="skills-category-list">
+                                <div class="skill-item">
+                                    <div class="skill-icon" style="background: #02569B;">
+                                        <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M14.314 0L2.3 12 6 15.7 21.684.013h-7.357L14.314 0zm.014 11.072L7.857 17.53l6.47 6.47H21.7l-6.46-6.468 6.46-6.46h-7.37z"/></svg>
+                                    </div>
+                                    <span class="skill-name">FLUTTER</span>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-icon" style="background: #20232A;">
+                                        <svg viewBox="0 0 24 24" fill="#61DAFB" width="28" height="28"><ellipse cx="12" cy="12" rx="11" ry="4.2" fill="none" stroke="#61DAFB" stroke-width="1.5"/><ellipse cx="12" cy="12" rx="11" ry="4.2" fill="none" stroke="#61DAFB" stroke-width="1.5" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="11" ry="4.2" fill="none" stroke="#61DAFB" stroke-width="1.5" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="2" fill="#61DAFB"/></svg>
+                                    </div>
+                                    <span class="skill-name">REACT</span>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-icon" style="background: #F7DF1E;">
+                                        <svg viewBox="0 0 24 24" fill="#000" width="28" height="28"><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.405-.6-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/></svg>
+                                    </div>
+                                    <span class="skill-name">JAVASCRIPT</span>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-icon" style="background: #02569B;">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" width="28" height="28"><circle cx="12" cy="6" r="3" fill="white"/><circle cx="6" cy="16" r="3" fill="white"/><circle cx="18" cy="16" r="3" fill="white"/><line x1="12" y1="9" x2="6" y2="13" /><line x1="12" y1="9" x2="18" y2="13" /><line x1="9" y1="16" x2="15" y2="16" /></svg>
+                                    </div>
+                                    <span class="skill-name">RIVERPOD</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Database -->
+                        <div class="skills-category" style="margin-top: 2rem;">
+                            <h4 class="skills-category-title">Database</h4>
+                            <div class="skills-category-list">
+                                <div class="skill-item">
+                                    <div class="skill-icon" style="background: #13aa52;">
+                                        <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M12 0C7.2 3.6 4.8 7.2 4.8 12c0 4.8 3.6 8.4 7.2 12 3.6-3.6 7.2-7.2 7.2-12 0-4.8-2.4-8.4-7.2-12zm.6 18c0 .3-.3.6-.6.6s-.6-.3-.6-.6v-2.4c0-.3.3-.6.6-.6s.6.3.6.6V18zm0-6c0 .3-.3.6-.6.6s-.6-.3-.6-.6V6.6c0-.3.3-.6.6-.6s.6.3.6.6V12z"/></svg>
+                                    </div>
+                                    <span class="skill-name">MONGODB</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 2 -->
+                    <div class="skills-col">
+                        <!-- Backend -->
+                        <div class="skills-category">
+                            <h4 class="skills-category-title">Backend</h4>
+                            <div class="skills-category-list">
+                                <div class="skill-item">
+                                    <div class="skill-icon" style="background: #339933;">
+                                        <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M11.998 24c-.321 0-.641-.084-.922-.247L8.14 22.016c-.438-.245-.224-.332-.08-.383.585-.203.703-.25 1.328-.604.065-.037.151-.023.218.017l2.256 1.339c.082.045.198.045.275 0l8.795-5.076c.082-.047.134-.141.134-.238V6.921c0-.099-.053-.194-.137-.242l-8.791-5.072c-.081-.047-.189-.047-.271 0L3.075 6.68c-.085.048-.139.144-.139.241v10.15c0 .097.054.189.137.236l2.409 1.392c1.307.654 2.108-.116 2.108-.89V7.787c0-.142.114-.253.256-.253h1.115c.139 0 .255.112.255.253v10.021c0 1.745-.95 2.745-2.604 2.745-.508 0-.909 0-2.026-.551L2.28 18.675c-.57-.329-.922-.943-.922-1.604V6.921c0-.66.352-1.273.922-1.602l8.795-5.082c.557-.315 1.296-.315 1.848 0l8.794 5.082c.57.329.924.941.924 1.602v10.15c0 .66-.354 1.273-.924 1.604l-8.794 5.078c-.28.163-.6.247-.925.247"/></svg>
+                                    </div>
+                                    <span class="skill-name">NODE.JS</span>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-icon" style="background: #000000;">
+                                        <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M12 0a12 12 0 100 24 12 12 0 000-24zm0 21.6c-4.48 0-8.23-3.14-9.25-7.39l8.6-11v1.65l-7.23 9.35c.78 2.92 3.1 5.2 6.03 6.03l2.85-3.66V21.6zm4.9-5.15V9.45c0-.85-.43-1.28-1.28-1.28s-1.28.43-1.28 1.28v7l-2.55-3.28V6.92c0-1 .55-1.55 1.55-1.55s1.55.55 1.55 1.55v4.36l4.56-5.87c1.78 1.48 3 3.65 3 6.09 0 2.22-.9 4.22-2.38 5.7l-4.44-5.7v2.32z"/></svg>
+                                    </div>
+                                    <span class="skill-name">NEXT.JS</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Tools -->
+                        <div class="skills-category" style="margin-top: 2rem;">
+                            <h4 class="skills-category-title">Tools</h4>
+                            <div class="skills-category-list">
+                                <div class="skill-item">
+                                    <div class="skill-icon" style="background: #F05032;">
+                                        <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M23.546 10.93L13.067.452c-.604-.603-1.582-.603-2.188 0L8.708 2.627l2.76 2.76c.645-.215 1.379-.07 1.889.441.516.515.658 1.258.438 1.9l2.66 2.66c.645-.222 1.387-.078 1.9.435.721.72.721 1.884 0 2.604-.72.719-1.886.719-2.604 0-.516-.515-.658-1.26-.435-1.906l-2.48-2.48v6.53c.175.087.34.2.486.348.713.72.713 1.883 0 2.6-.719.721-1.889.721-2.609 0-.719-.72-.719-1.88 0-2.6.182-.18.387-.316.605-.406V8.835c-.217-.091-.424-.222-.6-.401-.525-.524-.662-1.27-.422-1.91L7.987 3.79.44 11.334c-.604.604-.604 1.582 0 2.186l10.48 10.477c.604.604 1.582.604 2.186 0l10.44-10.48c.604-.603.604-1.581 0-2.186"/></svg>
+                                    </div>
+                                    <span class="skill-name">GIT</span>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-icon" style="background: linear-gradient(135deg, #7C4DFF, #18ffff);">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" width="28" height="28"><path d="M12 2v20M5 12h14M8 7l4-5 4 5M16 17l-4 5-4-5" /></svg>
+                                    </div>
+                                    <span class="skill-name">ANTIGRAVITY</span>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-icon" style="background: #FFCA28;">
+                                        <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M20.005 8.35L17.15 2.92a.965.965 0 00-1.74 0L12.56 8.35h7.445zM3.995 8.35l5.24-5.24c.38-.38 1-.38 1.38 0l1.94 1.94-5.22 8.3-3.34-5zM12 11.53l3.05 4.86c.38.61.18 1.4-.43 1.78l-5.62 3.48c-.62.38-1.42.18-1.8-.44L3.99 15.86l8.01-4.33z"/></svg>
+                                    </div>
+                                    <span class="skill-name">FIREBASE</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-
-            <p>I'm a creative developer who loves to build web applications. I love the process of turning complex
-                problems into simple, beautiful designs. When I'm not coding, you can find me exploring new
-                technologies, contributing to open source projects, or enjoying a good cup of coffee. I believe in
-                writing clean, maintainable code and creating experiences that users genuinely enjoy. These are the
-                stack that, I use for development.</p>
-
-            <div class="skills">
-                <span class="skill-tag">HTML</span>
-                <span class="skill-tag">CSS</span>
-                <span class="skill-tag">JavaScript</span>
-                <span class="skill-tag">Flutter</span>
-                <span class="skill-tag">Git</span>
+    <!-- Works Section -->
+    <section id="works" class="works-section">
+        <div class="works-header">
+            <span class="works-script">Featured</span>
+            <h2 class="works-title">WORKS</h2>
+        </div>
+        <div class="works-grid">
+            <div class="work-card" data-project="1">
+                <div class="work-card-image">
+                    <img src="Resources/firstproject.png" alt="Gokyo Bistro Project">
+                    <div class="work-card-overlay">
+                        <span class="work-card-view">View Project →</span>
+                    </div>
+                </div>
+                <div class="work-card-info">
+                    <h3>Gokyo Bistro</h3>
+                    <p>Restaurant Management System</p>
+                </div>
             </div>
-
-        </div>
-        </div>
-    </section>
-
-    <section id="projects">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3 class="project-title">Gokyo Bistro Online Restaurant Management System</h3>
-                    <p class="project-description">A comprehensive solution for managing restaurant operations online, including order processing, inventory management, and customer relationship management.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">JS</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://cheery-pegasus-71d26c.netlify.app/" class="project-link">view project</a>
-
+            <div class="work-card" data-project="2">
+                <div class="work-card-image">
+                    <img src="Resources/project-1.png" alt="">
+                    <div class="work-card-overlay">
+                        <span class="work-card-view">View Project →</span>
                     </div>
                 </div>
-
-                <div class="project-card">
-                    <h3 class="project-title">Task Management App</h3>
-                    <p class="project-description">A collaborative task management application with real-time updates,
-                        drag-and-drop functionality, and team collaboration features.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Next.js</span>
-                        <span class="tech-tag">TypeScript</span>
-                        <span class="tech-tag">Prisma</span>
-                        <span class="tech-tag">Socket.io</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">Not Completed</a>
-
+                <div class="work-card-info">
+                    <h3>Dev Workspace</h3>
+                    <p>Web Development Portfolio</p>
+                </div>
+            </div>
+            <div class="work-card" data-project="3">
+                <div class="work-card-image">
+                    <img src="Resources/project-2.png" alt="">
+                    <div class="work-card-overlay">
+                        <span class="work-card-view">Coming Soon</span>
                     </div>
                 </div>
-                <div class="project-card">
-                    <h3 class="project-title">Weather Dashboard</h3>
-                    <p class="project-description">A beautiful weather dashboard with location-based forecasts,
-                        interactive maps, and detailed weather analytics with data visualization.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Flutter</span>
-                        <span class="tech-tag">D3.js</span>
-                        <span class="tech-tag">OpenWeather API</span>
-                        <span class="tech-tag">Chart.js</span>
+                <div class="work-card-info">
+                    <h3>TaskFlow</h3>
+                    <p>Task Management App</p>
+                </div>
+            </div>
+            <div class="work-card" data-project="4">
+                <div class="work-card-image">
+                    <img src="Resources/project-3.png" alt="">
+                    <div class="work-card-overlay">
+                        <span class="work-card-view">Coming Soon</span>
                     </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">Not Completed</a>
-
-                    </div>
+                </div>
+                <div class="work-card-info">
+                    <h3>WeatherVue</h3>
+                    <p>Weather Dashboard</p>
                 </div>
             </div>
         </div>
+        <div class="works-footer">
+            <a href="https://github.com/manishcodes-dot" class="view-all-link">View all &gt;</a>
+        </div>
     </section>
 
-    <section id="contact">
-        <div class="container">
-            <h2 class="section-title">Let's Connect</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3 style="font-size: 2.2rem; font-weight: 300; margin-bottom: 1.5rem; color: var(--text-primary);">
-                        We are here to help!</h3>
-                    <p class="contact-text"> I’m always open to new opportunities, collaborations, and projects. Feel
-                        free to reach out if you’d like to work together or discuss your ideas.
-                        </p>
-                    <div class="contact-links" style="justify-content: flex-start; margin-top: 2rem;">
-                        <a href="mailto:manishrana98449@gmail.com" class="contact-link">Email</a>
-                        <a href="https://www.instagram.com/manishrana98449/" class="contact-link">Instagram</a>
-                        <a href="https://github.com/manishcodes-dot" class="contact-link">GitHub</a>
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="faq-header">
+            <h2 class="faq-title">FAQ</h2>
+            <span class="faq-script">Information</span>
+        </div>
+        <div class="faq-grid">
+            <div class="faq-column">
+                <h4 class="faq-column-title">QUESTIONS</h4>
+                <div class="faq-item" data-faq="1">
+                    <div class="faq-question">
+                        <span>What technologies do you use?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>I primarily work with HTML, CSS, JavaScript for frontend development, and Flutter for mobile app development. I'm also experienced with Git, REST APIs, and modern development tooling.</p>
                     </div>
                 </div>
-                <div class="contact-form-container">
-                    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
-                        <input type="hidden" name="access_key" value="1eb1a67f-c863-4a1c-b6a0-fceb34cda97c">
-                        <input type="text" name="name" placeholder="Name" class="form-input" required>
-                        <input type="email" name="email" placeholder="Email" class="form-input" required>
-                        <input type="tel" name="phone" placeholder="Phone number" class="form-input">
-                        <textarea name="message" placeholder="Comment" class="form-input form-textarea" rows="4"
-                            required></textarea>
-                        <button type="submit" class="cta-button"
-                            style="margin-top: 1rem; border: none; cursor: pointer; display: block; width: fit-content; margin-left: 0;">Submit</button>
-                    </form>
+                <div class="faq-item" data-faq="2">
+                    <div class="faq-question">
+                        <span>What is your development process?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>I follow an agile approach: understand requirements, plan architecture, build iteratively with clean code, test thoroughly, and deploy with attention to performance and user experience.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-faq="3">
+                    <div class="faq-question">
+                        <span>Are you available for freelance work?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! I'm always open to new opportunities and collaborations. Feel free to reach out through the contact section below to discuss your project ideas.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-column">
+                <h4 class="faq-column-title">ANSWERS</h4>
+                <div class="faq-item" data-faq="4">
+                    <div class="faq-question">
+                        <span>How long does a project take?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Timelines vary based on complexity. A simple landing page might take 1-2 weeks, while a full web application can take 4-8 weeks. I provide detailed timelines during project scoping.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-faq="5">
+                    <div class="faq-question">
+                        <span>Do you offer ongoing support?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely. I provide post-launch support and maintenance to ensure your project continues running smoothly. We can discuss ongoing support plans based on your needs.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-faq="6">
+                    <div class="faq-question">
+                        <span>Can you work with existing codebases?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, I'm comfortable working with existing projects. I can audit, refactor, add features, or fix bugs in existing codebases with care and attention to maintaining code quality.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="contact-inner">
+            <span class="contact-script">Let's work together!</span>
+            <h2 class="contact-title">REACH OUT</h2>
+            <div class="contact-form-wrapper">
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="contactForm">
+                    <input type="hidden" name="access_key" value="1eb1a67f-c863-4a1c-b6a0-fceb34cda97c">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" placeholder="Your email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" name="phone" id="phone" placeholder="Your phone number">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" placeholder="Tell me about your project..." rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        <span>Send Message</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+            <div class="contact-links">
+                <a href="mailto:manishrana98449@gmail.com" class="contact-link-item">Email</a>
+                <span class="contact-divider">•</span>
+                <a href="https://www.instagram.com/manishrana98449/" class="contact-link-item">Instagram</a>
+                <span class="contact-divider">•</span>
+                <a href="https://github.com/manishcodes-dot" class="contact-link-item">GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-inner">
+            <span class="footer-logo">MR</span>
+            <p class="footer-copy">&copy; 2026 Manish Rana. All rights reserved.</p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
-
-    <!-- AI Chat Items -->
-    <!-- Floating Button -->
-    <button id="aiFloatBtn">🤖</button>
-
-    <!-- Chat Box -->
-    <div id="chatBox">
-        <textarea id="userInput" rows="4" placeholder="Ask your question..."></textarea>
-        <button id="generateBtn">Ask</button>
-        <div id="output">🤖 Ready</div>
-    </div>
-
-    <!-- Gemini Script -->
-    <script type="module">
-        import { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold } from 'https://cdn.jsdelivr.net/npm/@google/generative-ai@latest/+esm';
-
-        const API_KEY = "--"; // OK for dev/testing only
-        const genAI = new GoogleGenerativeAI(API_KEY);
-
-
-
-        const ENDPOINTS = {
-            ITEMS: 'https://icy-bird-ddcc.dummyone137.workers.dev/available-items',
-            PURCHASES: 'https://icy-bird-ddcc.dummyone137.workers.dev/purchases'
-        };
-
-        const safetySettings = [
-            {
-                category: HarmCategory.HARM_CATEGORY_HARASSMENT,
-                threshold: HarmBlockThreshold.BLOCK_ONLY_HIGH,
-            },
-            {
-                category: HarmCategory.HARM_CATEGORY_HATE_SPEECH,
-                threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE,
-            },
-        ];
-
-        const username = "Guest";
-        const account_num = "N/A";
-        const toggleBtn = document.getElementById("aiFloatBtn");
-        const chatBox = document.getElementById("chatBox");
-
-        toggleBtn.addEventListener("click", () => {
-            chatBox.style.display = chatBox.style.display === "flex" ? "none" : "flex";
-            chatBox.style.flexDirection = "column";
-        });
-
-        async function fetchData(url) {
-            const response = await fetch(url);
-            if (!response.ok) throw new Error(`Failed to fetch ${url}`);
-            return response.json();
-        }
-
-        async function typeWriter(text, element, delay = 30) {
-            element.innerHTML = "";
-            for (let i = 0; i < text.length; i++) {
-                element.innerHTML += text[i];
-                await new Promise(resolve => setTimeout(resolve, delay));
-            }
-        }
-
-        async function generateContent() {
-            const inputEl = document.getElementById('userInput');
-            const rawInput = inputEl.value.trim();
-            const outputDiv = document.getElementById('output');
-
-            if (!rawInput) {
-                outputDiv.innerHTML = "⚠️ Please enter something.";
-                return;
-            }
-
-            outputDiv.innerHTML = "⏳ Thinking...";
-
-            try {
-                const [availableItems, purchaseHistory] = await Promise.all([
-                    fetchData(ENDPOINTS.ITEMS),
-                    fetchData(ENDPOINTS.PURCHASES)
-                ]);
-
-                const model = genAI.getGenerativeModel({
-                    model: "gemini-1.5-flash", // Safe for free use
-                    safetySettings,
-                });
-
-                const result = await model.generateContent({
-                    contents: [
-                        {
-                            role: "user",
-                            parts: [{
-                                text: `You are an AI assistant trained by Manish.\n\nUser: @${username}\nAccount: ${account_num}\nAvailable Items: ${JSON.stringify(availableItems)}\nPurchase History: ${JSON.stringify(purchaseHistory)}\n\nQuestion: ${rawInput}\n\nAnswer in clear bullet points if possible.`
-                            }]
-                        }
-                    ]
-                });
-
-                const responseText = result.response?.candidates?.[0]?.content?.parts?.[0]?.text;
-
-                if (!responseText || responseText.trim() === "") {
-                    outputDiv.innerHTML = "⚠️ The response was empty. Try again.";
-                    return;
-                }
-
-                await typeWriter(responseText, outputDiv);
-                inputEl.value = "";
-
-            } catch (error) {
-                console.error("Error:", error);
-                outputDiv.innerHTML = `❌ Error: ${error.message}`;
-            }
-        }
-
-        document.getElementById('generateBtn').addEventListener('click', generateContent);
-        document.getElementById('userInput').addEventListener('keydown', (e) => {
-            if (e.key === "Enter" && !e.shiftKey) {
-                e.preventDefault();
-                generateContent();
-            }
-        });
-    </script>
 </body>
 
 </html>
