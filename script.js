@@ -40,6 +40,7 @@ function initNavigation() {
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenuBtn.classList.toggle('active');
             navLinksContainer.classList.toggle('open');
+            navbar.classList.toggle('menu-open');
             document.body.style.overflow = navLinksContainer.classList.contains('open') ? 'hidden' : '';
         });
     }
@@ -50,6 +51,7 @@ function initNavigation() {
             if (navLinksContainer.classList.contains('open')) {
                 mobileMenuBtn.classList.remove('active');
                 navLinksContainer.classList.remove('open');
+                navbar.classList.remove('menu-open');
                 document.body.style.overflow = '';
             }
         });

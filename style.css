@@ -73,6 +73,10 @@ img {
     mix-blend-mode: difference;
 }
 
+#navbar.menu-open {
+    mix-blend-mode: normal;
+}
+
 #navbar.scrolled {
     mix-blend-mode: normal;
     background: rgba(255, 255, 255, 0.95);
@@ -996,7 +1000,9 @@ footer {
         left: 0;
         width: 100%;
         height: 100vh;
-        background: var(--white);
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -1064,7 +1070,7 @@ footer {
     /* FAQ */
     .faq-grid {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 0;
     }
 
     .faq-spacer {
