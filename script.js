@@ -164,6 +164,8 @@ function initWorkCards() {
                 window.open('https://cheery-pegasus-71d26c.netlify.app/', '_blank');
             } else if (projectNum === '2') {
                 window.open('https://test12418.netlify.app/', '_blank');
+            } else if (projectNum === '3' || projectNum === '4') {
+                window.open('blank.html', '_blank');
             }
         });
     });
