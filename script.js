@@ -353,3 +353,4 @@ function initParallaxHero() {
     `;
     document.head.appendChild(style);
 })();
+
