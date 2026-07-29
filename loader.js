@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    window.scrollTo(0, 0);
     const preloader = document.getElementById('preloader');
     const greetingText = document.getElementById('greeting-text');
     
@@ -31,7 +32,14 @@ document.addEventListener('DOMContentLoaded', () => {
             // Done cycling through greetings, hide preloader
             setTimeout(() => {
                 preloader.classList.add('hidden');
-                // Optional: remove from DOM after transition
+                window.scrollTo(0, 0);
+                if (window.lenis) {
+                    window.lenis.scrollTo(0, { immediate: true });
+                }
+                if (typeof ScrollTrigger !== 'undefined') {
+                    ScrollTrigger.refresh();
+                }
+                // Remove from DOM after transition
                 setTimeout(() => {
                     preloader.style.display = 'none';
                 }, 300);

@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css">
     <link rel="stylesheet" href="style.css?v=3">
     <link rel="stylesheet" href="loader.css">
 </head>
@@ -24,31 +25,61 @@
         <div id="greeting-text"></div>
     </div>
 
-    <!-- Navigation -->
-    <nav id="navbar">
-        <div class="nav-inner">
-            <a href="#home" class="nav-logo">MR</a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#works" class="nav-link">Works</a></li>
-                <li><a href="#faq" class="nav-link">FAQ</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+    <!-- Right-Side Navigation Sidebar (Transparent Floating Navigation) -->
+    <aside id="right-sidebar" class="right-sidebar">
+        <!-- Collapsed Trigger Strip with Floating Vertical Tick Mark Indicators -->
+        <div class="sidebar-trigger-strip" aria-label="Open Navigation Menu">
+            <div class="tick-marks-container">
+                <span class="tick-mark"></span>
+                <span class="tick-mark"></span>
+                <span class="tick-mark"></span>
+                <span class="tick-mark"></span>
+                <span class="tick-mark"></span>
+                <span class="tick-mark"></span>
+                <span class="tick-mark"></span>
+                <span class="tick-mark"></span>
+                <span class="tick-mark"></span>
+                <span class="tick-mark"></span>
+                <span class="tick-mark"></span>
+                <span class="tick-mark"></span>
+                <span class="tick-mark"></span>
+                <span class="tick-mark"></span>
+                <span class="tick-mark"></span>
+                <span class="tick-mark"></span>
+                <span class="tick-mark"></span>
+                <span class="tick-mark"></span>
+                <span class="tick-mark"></span>
+                <span class="tick-mark"></span>
+                <span class="tick-mark"></span>
+                <span class="tick-mark"></span>
+                <span class="tick-mark"></span>
+                <span class="tick-mark active-tick"></span>
+            </div>
         </div>
-    </nav>
+
+        <!-- Expanded Sidebar Panel (Transparent Text-Only Navigation) -->
+        <div class="sidebar-panel">
+            <nav class="sidebar-nav">
+                <div class="sidebar-hover-bg"></div>
+                <div class="sidebar-active-bar"></div>
+                <ul class="sidebar-links">
+                    <li><a href="#home" class="sidebar-link active" data-nav="home">Home</a></li>
+                    <li><a href="#about" class="sidebar-link" data-nav="about">About</a></li>
+                    <li><a href="#works" class="sidebar-link" data-nav="works">Works</a></li>
+                    <li><a href="#faq" class="sidebar-link" data-nav="faq">FAQ</a></li>
+                    <li><a href="#contact" class="sidebar-link" data-nav="contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-bg">
-            <img src="Resources/heropagebackground.png" alt="Studio storefront" class="hero-bg-img">
+            <img src="Resources/heropagebackground.png" alt="Studio storefront" class="hero-bg-img hero-bg-base">
             <div class="hero-overlay"></div>
         </div>
+        <div class="dissolve-grid" aria-hidden="true"></div>
         <div class="hero-content">
             <p class="hero-tagline">Custom web and app tailored to your brand.</p>
             <h1 class="hero-name">Manish Rana</h1>
@@ -355,7 +386,12 @@
         </div>
     </footer>
 
-    <script src="script.js?v=2"></script>
+    <!-- GSAP, ScrollTrigger, ScrollToPlugin & Lenis -->
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+    <script src="script.js?v=3"></script>
     <script src="loader.js"></script>
 </body>
 
