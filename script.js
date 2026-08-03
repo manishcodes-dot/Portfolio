@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initWorkCards();
     initFormInteractions();
     initSmoothScrolling();
-    initHeroScrollTransition();
+
 });
 
 /* ===== RIGHT-SIDE HOVER NAVIGATION SIDEBAR ===== */
@@ -299,154 +299,7 @@ function initLenis() {
     }
 }
 
-/* ===== HERO SCROLL-DRIVEN DISSOLVE TRANSITION ===== */
-/* ===== HERO SCROLL-DRIVEN DISSOLVE TRANSITION ===== */
-function initHeroScrollTransition() {
-    const heroSection = document.querySelector('#home.hero');
-    const dissolveGrid = document.querySelector('.dissolve-grid');
-    const heroBg = document.querySelector('.hero-bg');
-    const heroContent = document.querySelector('.hero-content');
-    const heroIndicator = document.querySelector('.hero-scroll-indicator');
 
-    if (!heroSection || !dissolveGrid || !heroBg || typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
-        return;
-    }
-
-    if (typeof gsap.registerPlugin !== 'undefined') {
-        if (typeof ScrollTrigger !== 'undefined' && typeof ScrollToPlugin !== 'undefined') {
-            gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-        } else if (typeof ScrollTrigger !== 'undefined') {
-            gsap.registerPlugin(ScrollTrigger);
-        }
-    }
-
-    const BLOCK_SIZE = 24; // Configurable solid grid block size in pixels (smaller, sleeker blocks)
-    let cells = [];
-    let rows = 0;
-    let cols = 0;
-
-    function createGrid() {
-        dissolveGrid.innerHTML = '';
-        cells = [];
-
-        const width = heroSection.clientWidth;
-        const height = heroSection.clientHeight;
-
-        cols = Math.ceil(width / BLOCK_SIZE);
-        rows = Math.ceil(height / BLOCK_SIZE);
-
-        dissolveGrid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
-        dissolveGrid.style.gridTemplateRows = `repeat(${rows}, 1fr)`;
-
-        for (let r = 0; r < rows; r++) {
-            for (let c = 0; c < cols; c++) {
-                const cell = document.createElement('div');
-                cell.className = 'dissolve-cell';
-
-                // Bottom-to-Top Normalized Y: 0 at bottom of screen, 1 at top of screen
-                const normY = 1 - (r / Math.max(1, rows - 1));
-                const normX = c / Math.max(1, cols - 1);
-
-                // Wavefront position starting from bottom to top
-                const wavePos = 0.85 * normY + 0.15 * normX;
-
-                // Deterministic pseudo-random noise hash per cell
-                const rawHash = Math.abs(Math.sin((r + 1) * 12.9898 + (c + 1) * 78.233) * 43758.5453) % 1;
-                
-                // Scatter threshold offset (-0.1 to +0.1)
-                const thresholdOffset = (rawHash - 0.5) * 0.2;
-
-                cells.push({
-                    el: cell,
-                    threshold: wavePos + thresholdOffset
-                });
-
-                dissolveGrid.appendChild(cell);
-            }
-        }
-    }
-
-    createGrid();
-
-    // Ensure 100% full visibility of landing page on initial load
-    gsap.set(heroBg, { clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)' });
-    gsap.set(dissolveGrid, { autoAlpha: 0 });
-
-    // GSAP ScrollTrigger timeline pinned strictly to the Hero section
-    const tl = gsap.timeline({
-        scrollTrigger: {
-            trigger: heroSection,
-            start: 'top top',
-            end: '+=50%',
-            pin: true,
-            scrub: 0.2,
-            invalidateOnRefresh: true,
-            onUpdate: (self) => {
-                const progress = self.progress; // 0.0 to 1.0
-
-                // Toggle grid overlay visibility strictly during active scroll phase
-                if (progress > 0.01 && progress < 0.99) {
-                    gsap.set(dissolveGrid, { autoAlpha: 1 });
-                } else {
-                    gsap.set(dissolveGrid, { autoAlpha: 0 });
-                }
-
-                // Distance-based math formula with quadratic density falloff for solid cells
-                const waveCenter = progress * 1.3 - 0.15; // Wave sweeps from -0.15 to 1.15
-                const bandWidth = 0.15; // Width of active dissolve band
-
-                for (let i = 0; i < cells.length; i++) {
-                    const cell = cells[i];
-                    const dist = cell.threshold - waveCenter;
-
-                    if (Math.abs(dist) <= bandWidth) {
-                        // Inside active wave front: solid block with quadratic density falloff
-                        const normDist = dist / bandWidth;
-                        const factor = 1 - (normDist * normDist); // 1.0 at center, 0.0 at edges
-                        cell.el.style.opacity = factor.toFixed(3);
-                        cell.el.style.transform = `scale(${0.85 + 0.15 * factor})`;
-                    } else {
-                        // Outside active band: completely transparent
-                        cell.el.style.opacity = '0';
-                        cell.el.style.transform = 'scale(1)';
-                    }
-                }
-            }
-        }
-    });
-
-    // Animate Hero background clipping from Bottom to Top (100% height down to 0% height)
-    tl.to(heroBg, {
-        clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
-        ease: 'none'
-    }, 0);
-
-    // Fade out Hero text content gracefully during scroll
-    if (heroContent) {
-        tl.to(heroContent, {
-            opacity: 0,
-            ease: 'none'
-        }, 0);
-    }
-
-    // Fade out Hero scroll indicator gracefully during scroll
-    if (heroIndicator) {
-        tl.to(heroIndicator, {
-            opacity: 0,
-            ease: 'none'
-        }, 0);
-    }
-
-    // Window resize handler with debounce
-    let resizeTimer;
-    window.addEventListener('resize', () => {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(() => {
-            createGrid();
-            ScrollTrigger.refresh();
-        }, 200);
-    });
-}
 
 /* ===== CURSOR CUSTOM EFFECT (subtle) ===== */
 (function () {
@@ -510,39 +363,5 @@ function initHeroScrollTransition() {
     });
 })();
 
-/* ===== TEXT SPLIT ANIMATION (for hero name) ===== */
-(function () {
-    const heroName = document.querySelector('.hero-name');
-    if (!heroName) return;
 
-    // Add a subtle letter-by-letter animation on load
-    const text = heroName.innerHTML;
-    const lines = text.split('<br>');
-    heroName.innerHTML = '';
-
-    lines.forEach((line, lineIndex) => {
-        const lineEl = document.createElement('div');
-        lineEl.style.overflow = 'hidden';
-
-        const innerEl = document.createElement('span');
-        innerEl.textContent = line;
-        innerEl.style.display = 'inline-block';
-        innerEl.style.transform = 'translateY(100%)';
-        innerEl.style.animation = `slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) ${0.4 + lineIndex * 0.15}s forwards`;
-
-        lineEl.appendChild(innerEl);
-        heroName.appendChild(lineEl);
-    });
-
-    // Add the keyframe
-    const style = document.createElement('style');
-    style.textContent = `
-        @keyframes slideUp {
-            to {
-                transform: translateY(0);
-            }
-        }
-    `;
-    document.head.appendChild(style);
-})();
 
